@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetics</title>
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!--Bootsrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--Animation Aso-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+   <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'poppins': ['Poppins'], 'inter': ['Inter'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mobile Dropdown Smoothness */
+        #mobile-shop-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        #mobile-shop-list.show { max-height: 300px; }
+        
+        /* Desktop Hover Underline */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -2px; left: 0; background: #F72585;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="font-inter  bg-white overflow-x-hidden ">
+<!--Nav Bar-->
+    <header class="w-full bg-white px-4 md:px-10 py-6 fixed  bg-white/80 backdrop-blur-md top-0 z-50 shadow-sm">
+    <div class="max-w-[1440px] mx-auto  ml-12 flex items-center justify-between">
+        <div data-aos="fade-right" >
+            <a href="index.html"><img src="./assets/image/logo.png" alt="Glowify" class="h-18 sm:h-[100px] md:h-20 lg:h-20  object-contain"></a>
+        </div>
+
+        <div class="hidden xl:flex items-center bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-[30px] px-6 py-6 gap-8 border border-gray-50" data-aos="fade-down">
+            <div class="flex items-center bg-gray-50 rounded-2xl px-4 py-2 w-64 border border-pink-300">
+                <i class="bi bi-search text-gray-400 mr-2 text-sm"></i>
+                <span id="changing-text" class="text-gray-400 text-sm font-medium transition-all duration-500">Search skincare...</span>
+            </div>
+            <nav>
+                <ul class="flex items-center gap-10 text-gray-700 font-bold text-[18px]">
+                    <li class="nav-link hover:text-[#F72585] font-bold"><a href="index.html">Home</a></li>
+                    <li class="relative group py-2 cursor-pointer">
+                        <a href="shop.html">
+                       <span class="nav-link group-hover:text-[#F72585] pb-4">Shop</span></a>
+                          
+                        </li>
+                    <li class="nav-link cursor-pointer text-[#F72585]"><a href="#">Offers </a></li>
+                    <li class="nav-link cursor-pointer hover:text-[#F72585]"><a href="about.html">About </a></li>
+                    <li class="nav-link cursor-pointer hover:text-[#F72585]"><a href="contact.html">Contact </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex items-center gap-2 md:gap-6">
+            <div class="hidden xl:flex items-center gap-4">
+             <a href="cart.html" class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white shadow-md border border-black-500 text-black-700 font-extrabold  hover:scale-110 transition-all">
+                <i class="bi bi-cart3 text-sm md:text-lg"></i>
+             </a>
+            <a href="wishlist.html" class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white shadow-md border border-black-500 text-pink-500 hover:scale-110 transition-all">
+                <i class="bi bi-heart-fill text-sm md:text-lg"></i>
+            </a>
+             <a href="user.html" class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white shadow-md border border-black-500  text-black-700 font-extrabold hover:scale-110 transition-all">
+                <i class="bi bi-person text-sm md:text-lg"></i>
+             </a>
+            </div>
+            <button id="menu-btn" class="xl:hidden ml-1 md:ml-2 text-2xl md:text-3xl text-gray-800">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </div>
+</header>
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[100] transform translate-x-full transition-transform duration-500 xl:hidden">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-10">
+                
+                <button id="close-btn" class="text-3xl text-gray-800"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="flex gap-6 mb-10 border-b pb-6 border-gray-100">
+            <div class="flex flex-col items-center gap-1">
+                <a href="cart.html" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-50 text-gray-700 shadow-sm border border-gray-100"><i class="bi bi-cart3 text-xl"></i></a>
+                <span class="text-[10px] font-bold text-gray-500">CART</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+                <a href="wishlist.html" class="w-12 h-12 flex items-center justify-center rounded-full bg-[#ff1b6b] text-white shadow-md"><i class="bi bi-heart-fill text-xl"></i> </a>
+                <span class="text-[10px] font-bold text-[#ff1b6b]">FAV</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+                <a href="user.html" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-50 text-gray-700 shadow-sm border border-gray-100"><i class="bi bi-person text-xl"></i> </a>
+                <span class="text-[10px] font-bold text-gray-500">LOGIN</span>
+            </div>
+        </div>
+            <ul class="flex flex-col gap-4 text-xl font-bold font-poppins text-gray-800">
+                <li> <a href="index.html">Home </a></li>
+                <li>
+                    <div id="mobile-shop-toggle" class="flex justify-between items-center w-full">
+                       <a href="shop.html"> Shop</a></i>
+                    </div>
+                   
+                </li>
+                <li> <a href="#">Offers </a></li>
+                <li> <a href="about.html">About </a></li>
+                <li> <a href="contact.html">Contact </a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Hero Banner-->
+      <section class="max-w-[1440px] mx-auto px-4 mt-48 md:px-10 py-6">
+    <div class="relative w-full h-[300px] md:h-[680px] rounded-[40px] md:rounded-[30px] overflow-hidden shadow-2xl group">
+        
+        <div id="slider" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+            <div class="min-w-full h-full relative">
+                <img src="./assets/image/offer1.png" class="w-full h-full object-cover" alt="Summer Sale">
+                
+            </div>
+            <div class="min-w-full h-full relative">
+                <img src="./assets/image/offer2.png" class="w-full h-full object-cover" alt="New Arrivals">
+                
+            </div>
+            <div class="min-w-full h-full relative">
+                <img src="./assets/image/header3.png" class="w-full h-full object-cover" alt="Luxury Care">
+                
+            </div>
+        </div>
+
+        <button id="prevBtn" class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-xl opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff1b6b] hover:text-white">
+            <i class="bi bi-chevron-left text-xl"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-xl opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff1b6b] hover:text-white">
+            <i class="bi bi-chevron-right text-xl"></i>
+        </button>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+            <div class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all border border-gray-200"></div>
+            <div class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all border border-gray-200"></div>
+            <div class="dot w-3 h-3 bg-white/50 rounded-full cursor-pointer transition-all border border-gray-200"></div>
+        </div>
+    </div>
+</section>
+<section class="max-w-[1200px] mx-auto px-6 py-12">
+
+    <h2 class="text-3xl font-bold text-gray-800 mb-10">Buy 1 Get 1 Free</h2>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+    
+        <div class="group" data-aos="fade-up">
+            <div class="overflow-hidden rounded-[30px] mb-4 bg-[#fdf2e9]">
+                <img src="./assets/image/buy1.webp" class="w-full h-[350px] object-cover group-hover:scale-110 transition-transform duration-500" alt="Product 1">
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Vitamin C+ SPF Duo</h3>
+            <p class="text-gray-500 text-sm mt-1">Daily Production Bundle</p>
+            <div class="flex items-center gap-3 mt-2">
+                <span class="text-[#ff1b6b] font-bold text-lg">₹350</span>
+                <span class="text-gray-400 line-through">₹500</span>
+            </div>
+            <button class="w-full mt-5 py-3 border-2 border-[#ff1b6b] text-[#ff1b6b] rounded-xl font-bold hover:bg-[#ff1b6b] hover:text-white transition-all shadow-sm">
+                Add to Cart
+            </button>
+        </div>
+        <div class="group" data-aos="fade-up" data-aos-delay="100">
+            <div class="overflow-hidden rounded-[30px] mb-4 bg-[#e9f5f2]">
+                <img src="./assets/image/buy2.webp" class="w-full h-[350px] object-cover group-hover:scale-110 transition-transform duration-500" alt="Product 2">
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Cleaning oil + Palm set</h3>
+            <p class="text-gray-500 text-sm mt-1">Double Cleanse Method</p>
+            <div class="flex items-center gap-3 mt-2">
+                <span class="text-[#ff1b6b] font-bold text-lg">₹350</span>
+                <span class="text-gray-400 line-through">₹500</span>
+            </div>
+            <button class="w-full mt-5 py-3 border-2 border-[#ff1b6b] text-[#ff1b6b] rounded-xl font-bold hover:bg-[#ff1b6b] hover:text-white transition-all shadow-sm">
+                Add to Cart
+            </button>
+        </div>
+        <div class="group" data-aos="fade-up" data-aos-delay="200">
+            <div class="overflow-hidden rounded-[30px] mb-4 bg-[#f0f0f8]">
+                <img src="./assets/image/buy3.avif" class="w-full h-[350px] object-cover group-hover:scale-110 transition-transform duration-500" alt="Product 3">
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Hyaluronic Acid + Mist</h3>
+            <p class="text-gray-500 text-sm mt-1">Hydration Powerhouse</p>
+            <div class="flex items-center gap-3 mt-2">
+                <span class="text-[#ff1b6b] font-bold text-lg">₹350</span>
+                <span class="text-gray-400 line-through">₹500</span>
+            </div>
+            <button class="w-full mt-5 py-3 border-2 border-[#ff1b6b] text-[#ff1b6b] rounded-xl font-bold hover:bg-[#ff1b6b] hover:text-white transition-all shadow-sm">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+<!-- Exclusive Kit Section -->
+<section class="max-w-[1200px] mx-auto px-6 py-16">
+    <div class="flex flex-col md:flex-row items-center gap-12 bg-white rounded-[40px] overflow-hidden shadow-sm">
+        <div class="w-full md:w-1/2" data-aos="fade-right">
+            <img src="./assets/image/exec.png" 
+                 class="w-full h-auto rounded-[30px] object-cover shadow-lg" 
+                 alt="Midnight Repair Set">
+        </div>
+        <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                Exclusive Kit: The Midnight Repair Set
+            </h2>
+            
+            <p class="text-gray-600 text-lg leading-relaxed">
+                A curated collection of our most powerful overnight treatments. Include a full size Retinol Serum, Silk eye mask, and Deep hydration night cream.
+            </p>
+
+            <div class="flex items-center gap-4 text-2xl">
+                <span class="text-[#ff1b6b] font-bold">₹350</span>
+                <span class="text-gray-400 line-through text-xl">₹500</span>
+                <span class="text-gray-900 font-semibold text-lg ml-2">Save 35%</span>
+            </div>
+
+            
+            <button class="w-full md:w-auto px-12 py-4 bg-[#ff1b6b] text-white text-lg font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-pink-200">
+                Claim This Offer
+            </button>
+        </div>
+
+    </div>
+</section>
+<section class="pb-24 px-6">
+    <div class="max-w-[1100px] mx-auto bg-[#FF6FAE] rounded-[40px] p-10 md:p-16 text-center text-white shadow-2xl relative overflow-hidden" data-aos="fade-up">
+        
+        <div class="absolute inset-0 opacity-0.18 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/p6.png');"></div>
+
+        <div class="relative z-10">
+            <h3 class="text-3xl md:text-4xl font-bold mb-4">Join The Inner Circle</h3>
+            <p class="mb-10 text-pink-100 max-w-2xl mx-auto">
+                Sign up to receive early access to new launches, exclusive offers and skincare tips.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <input type="email" placeholder="Enter Your Email" class="w-full md:w-[450px] px-8 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-white/20 transition-all">
+                <button class="w-full md:w-auto bg-white text-[#ff1b6b] px-12 py-4 rounded-full font-bold hover:bg-pink-50 transform hover:scale-105 transition-all shadow-lg">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="relative w-full bg-[#FF4D94] text-white pt-20 pb-10 overflow-hidden">
+    
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-10" 
+         
+         data-aos-duration="1500" 
+         data-aos-delay="200">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px] fill-white">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+    </div>
+
+    <div class="max-w-[1300px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mt-10 relative z-20">
+        
+        <div class="flex flex-col items-center md:items-start space-y-6" data-aos="fade-right">
+            <div class="bg-white p-6 rounded-full shadow-lg">
+                <img src="./assets/image/logo.png" class="w-32 h-auto" alt="Glowify Logo">
+            </div>
+            <p class="text-sm opacity-90 text-center md:text-left leading-relaxed md:text-xl">
+                3rd Floor, Valasaravakam,<br>
+                Chennai - 600800
+            </p>
+        </div>
+
+        <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-xl font-bold mb-6 underline decoration-white/30">Quick Links</h4>
+            <ul class="space-y-3 opacity-90">
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">Shop</a></li>
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">New Arrivals</a></li>
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">Offers</a></li>
+            </ul>
+        </div>
+
+        <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-xl font-bold mb-6 underline decoration-white/30">Support</h4>
+            <ul class="space-y-3 opacity-90">
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">About</a></li>
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">Contact</a></li>
+                <li><a href="#" class="hover:translate-x-2 transition-transform inline-block md:text-xl">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="text-center md:text-left" data-aos="fade-left">
+            <h4 class="text-xl font-bold mb-6">Follow Us</h4>
+            <div class="flex justify-center md:justify-start gap-4">
+                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-[#ff1b6b] transition-all">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-[#ff1b6b] transition-all">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-[#ff1b6b] transition-all">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+    duration: 1200,
+    once: true,     
+    offset: 200,   
+  });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

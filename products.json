@@ -1,0 +1,314 @@
+[
+    {
+        "id": 1,
+        "name": "PLIX Watermelon Hydrogel Eye Patches",
+        "brand": "PLIX",
+        "category": "eye makeup",
+        "color": "pink",
+        "discount": 10,
+        "price": 749,
+        "rating": "4.8",
+        "img": "./assets/image/shopping.webp"
+    },
+    {
+        "id": 2,
+        "name": "Lakme Eye Makeup Set",
+        "brand": "Lakme",
+        "category": "eye makeup",
+        "color": "black",
+        "discount": 20,
+        "price": 799,
+        "rating": "4.8",
+        "img": "./assets/image/shopping (1).webp"
+    },
+    {
+        "id": 3,
+        "name": "Minimalist Eye Cream",
+        "brand": "Lakme",
+        "category": "eye makeup",
+        "color": "rose pink",
+        "discount": 30,
+        "price": 749,
+        "rating": "4.8",
+        "img": "./assets/image/shopping (2).webp"
+    },
+    {
+         "id": 4,
+        "name": "Proffessional Waterproof HD Eye Makeup",
+        "brand": "Mars",
+        "category": "eye makeup",
+        "color": "black",
+        "discount": 20,
+        "price": 799,
+        "rating": "4.8",
+        "img": "./assets/image/shopping (3).webp"
+    },
+    {
+         "id": 5,
+        "name": "Hrdrogel Under Eye Patches",
+        "brand": "Velvet Intense",
+        "category": "eye makeup",
+        "color": "black",
+        "discount": 30,
+        "price": 849,
+        "rating": "4.8",
+        "img": "./assets/image/shopping (4).webp"
+    },
+    {
+         "id": 6,
+        "name": "Nykaa Eye Makeup Set",
+        "brand": "Nykaa",
+        "category": "eye makeup",
+        "color": "black",
+        "discount": 25,
+        "price": 799,
+        "rating": "4.8",
+        "img": "./assets/image/sh.webp"
+    },
+   {
+    "id": 101,
+    "name": "Luxury Fragrance Perfume",
+    "brand": "PLIX",
+    "price": 749,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shop.avif"
+  },
+  {
+    "id": 102,
+    "name": "Wild Stone Edge Men",
+    "brand": "Egde",
+    "price": 799,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (5).webp"
+  },
+  {
+    "id": 103,
+    "name": "Desire Perfume Premium",
+    "brand": "Vanesa",
+    "price": 749,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (6).webp"
+  },
+  {
+    "id": 104,
+    "name": "Denver Hamilton Perfume",
+    "brand": "Denver",
+    "price": 799,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (7).webp"
+  },
+  {
+    "id": 105,
+    "name": "Best Seller Perfumes Combo",
+    "brand": "Combo",
+    "price": 849,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (8).webp"
+  },
+  {
+    "id": 106,
+    "name": "Ultra Sensual Perfume",
+    "brand": "Wild Stone",
+    "price": 749,
+    "category": "fragrance",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (9).webp"
+  },
+  {
+    "id": 201,
+    "name": "L'Oreal Paris Hyaluron Moisture Shampoo",
+    "brand": "Loreal",
+    "price": 749,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (10).webp"
+  },
+  {
+    "id": 202,
+    "name": "Dyson Airwrap i.d Multi-Styler & Dryer",
+    "brand": "Dysan",
+    "price": 799,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (11).webp"
+  },
+  {
+    "id": 203,
+    "name": "Urban Yog MakeMeeBold 7-IN-1 Multi Air Styler",
+    "brand": "Urban",
+    "price": 749,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (12).webp"
+  },
+  {
+    "id": 204,
+    "name": "Bombae Hairess Ionic 3-In-1 Hot Air Brush",
+    "brand": "Bombae",
+    "price": 799,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (13).webp"
+  },
+  {
+    "id": 205,
+    "name": "Head & Shoulders Smooth Silky Anti Dandruff Shampoo",
+    "brand": "Nivea",
+    "price": 849,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (14).webp"
+  },
+  {
+    "id": 206,
+    "name": "Dhathri Hair Care Plus Dhathri",
+    "brand": "Dhathri",
+    "price": 799,
+    "category": "hair care",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (15).webp"
+  },
+
+
+  {
+    "id": 301,
+    "name": "Cream Luxe Finish",
+    "brand": "Glowify",
+    "price": 749,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip1.png"
+  },
+  {
+    "id": 302,
+    "name": "Satin Glow",
+    "brand": "LuxeAura",
+    "price": 799,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip2.png"
+  },
+  {
+    "id": 303,
+    "name": "Silk Luxe Formula",
+    "brand": "Velveté",
+    "price": 749,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip3.jpg"
+  },
+  {
+    "id": 304,
+    "name": "Soft Matte Finish",
+    "brand": "Elan Beauty",
+    "price": 799,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip4.jpg"
+  },
+  {
+    "id": 305,
+    "name": "Velvet Intense",
+    "brand": "AuraLips",
+    "price": 849,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip5.jpg"
+  },
+  {
+    "id": 306,
+    "name": "Creamy Satin",
+    "brand": "Glowify",
+    "price": 799,
+    "category": "lipsticks",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/lip5.webp"
+  },
+  
+  {
+    "id": 401,
+    "name": "Secret Lives Acrylic Press on Nails",
+    "brand": "Loreal",
+    "price": 749,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (16).webp"
+  },
+  {
+    "id": 402,
+    "name": "Beromt Printed Butterfly Nails",
+    "brand": "Beromt",
+    "price": 799,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (17).webp"
+  },
+  {
+    "id": 403,
+    "name": "Pep Nails Press On Stick On Nails",
+    "brand": "Pep",
+    "price": 749,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (18).webp"
+  },
+  {
+    "id": 404,
+    "name": "Secret Lives Premium Acrylic Reusable Artificial Press on Nails",
+    "brand": "Mermaid",
+    "price": 799,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/shopping (19).webp"
+  },
+  {
+    "id": 405,
+    "name": "45 Nail Art Images, Large Square Artwork Set",
+    "brand": "Mermaid",
+    "price": 849,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/nail1.webp"
+  },
+  {
+    "id": 406,
+    "name": "Mermaid Bling Long Almond / SET OF 14 Nails",
+    "brand": "Mermaid",
+    "price": 799,
+    "category": "nails",
+    "rating": 4.8,
+    "reviews": 214,
+    "img": "./assets/image/nail2.jpg"
+  }
+
+
+
+]
